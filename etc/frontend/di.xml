@@ -10,11 +10,4 @@
 			</argument>
 		</arguments>
 	</type>
-	<type name='Magento\Payment\Model\CcGenericConfigProvider'>
-		<arguments>
-			<argument name='methodCodes' xsi:type='array'>
-				<item name='dfe_ipay88' xsi:type='const'>Dfe\IPay88\Method::CODE</item>
-			</argument>
-		</arguments>
-	</type>
 </config>
