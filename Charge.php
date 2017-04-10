@@ -14,20 +14,23 @@ final class Charge extends \Df\PaypalClone\Charge {
 	 * @return array(string => mixed)
 	 */
 	protected function pCharge() {$s = $this->s(); return [
-		// 2017-04-10
-		// «Payment amount with two decimals and thousand symbols.
-		// Example: 1,278.99»
-		// Required, Currency.
-		'Amount' => ''
+		/**
+		 * 2017-04-10
+		 * «Payment amount with two decimals and thousand symbols. Example: 1,278.99»
+		 * Required, Currency.
+		 * @see \Dfe\IPay88\Method::amountFactor()
+		 * @see \Dfe\IPay88\Method::amountFormat()
+		 */
+		'Amount' => $this->amountF()
 		// 2017-04-10
 		// «Backend response page URL (refer to 2.7)».
 		// Required, String, 200.
-		,'BackendURL' => ''
+		,'BackendURL' => $this->callback()
 		// 2017-04-10
 		// «Refer to Appendix I.pdf file for MYR gateway.
 		// Refer to Appendix II.pdf file for Multi-curency gateway.».
 		// Required, String, 5.
-		,'Currency' => ''
+		,'Currency' => $this->currencyC()
 		// 2017-04-10
 		// «Encoding type
 		//		“ISO-8859-1” – English
@@ -50,15 +53,15 @@ final class Charge extends \Df\PaypalClone\Charge {
 		// 2017-04-10
 		// «Product description».
 		// Required, String, 100.
-		,'ProdDesc' => ''
+		,'ProdDesc' => mb_substr(df_oi_s($this->o()), 0, 100)
 		// 2017-04-10
 		// «Merchant remarks».
 		// Optional, String, 100.
-		,'Remark' => ''
+		,'Remark' => mb_substr($this->description(), 0, 100)
 		// 2017-04-10
 		// «Payment response page».
 		// Required, String, 200.
-		,'ResponseURL' => ''
+		,'ResponseURL' => $this->customerReturnRemote()
 		// 2017-04-10
 		// «Signature type = “SHA256”».
 		// Required, String, 10.
@@ -66,15 +69,15 @@ final class Charge extends \Df\PaypalClone\Charge {
 		// 2017-04-10
 		// «Customer contact number».
 		// Required, String, 20.
-		,'UserContact' => ''
+		,'UserContact' => mb_substr($this->addressBS()->getTelephone(), 0, 100) ?: 'absent'
 		// 2017-04-10
 		// «Customer email for receiving receipt».
 		// Required, String, 100.
-		,'UserEmail' => ''
+		,'UserEmail' => $this->customerEmail()
 		// 2017-04-10
 		// «Customer name».
 		// Required, String, 100.
-		,'UserName' => ''
+		,'UserName' => $this->customerName()
 	];}
 
 	/**

@@ -4,6 +4,27 @@ namespace Dfe\IPay88;
 final class Method extends \Df\PaypalClone\Method {
 	/**
 	 * 2017-04-10
+	 * «Payment amount with two decimals and thousand symbols. Example: 1,278.99»
+	 * @override
+	 * @see \Df\Payment\Method::amountFormat()
+	 * @used-by \Df\Payment\Operation::amountFormat()
+	 * @param float|int $a
+	 * @return string
+	 */
+	function amountFormat($a) {return number_format($a, 2, '.', ',');}
+
+	/**
+	 * 2017-04-10
+	 * @override
+	 * @see \Df\Payment\Method::amountFactor()
+	 * @used-by \Df\Payment\Method::amountFormat()
+	 * @used-by \Df\Payment\Method::amountParse()
+	 * @return int
+	 */
+	protected function amountFactor() {return 1;}
+
+	/**
+	 * 2017-04-10
 	 * @override
 	 * @see \Df\Payment\Method::amountLimits()
 	 * @used-by \Df\Payment\Method::isAvailable()
