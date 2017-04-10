@@ -35,7 +35,22 @@ abstract class Signer extends \Df\PaypalClone\Signer {
 	 * @see \Df\PaypalClone\Signer::sign()
 	 * @return string
 	 */
-	final protected function sign() {return sha1(df_cc('',
+	final protected function sign() {return base64_encode(self::hex2bin(sha1(df_cc('',
 		$this->s()->privateKey(), $this->v('MerchantCode'), $this->values()
-	));}
+	))));}
+
+	/**
+	 * 2017-04-10
+	 * @used-by sign()
+	 * @param string $s
+	 * @return string
+	 */
+    private static function hex2bin($s) {
+    	/** @var string $result */
+        $result = '';
+        for ($i = 0; $i < strlen($s); $i += 2) {
+            $result .= chr(hexdec(substr($s, $i, 2)));
+        }
+        return $result;
+    }
 }
