@@ -1,0 +1,1 @@
+define(['Df_Payment/loader'], function(l) {return l('Dfe_IPay88', 'dfe_ipay88');});
