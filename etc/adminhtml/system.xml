@@ -37,6 +37,20 @@
 					<backend_model>Df\Config\Backend\Checkbox</backend_model>
 					<comment><![CDATA[Enable the «<a href='https://mage2.pro/c/extensions/ipay88' target='_blank'>iPay88</a>» payment extension?]]></comment>
 				</field>
+				<field
+					id='title'
+					translate='label'
+					type='text'
+					sortOrder='2'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Title</label>
+					<comment><![CDATA[It is shown on the checkout screen.]]></comment>
+					<depends><field id='enable'>1</field></depends>
+					<validate>required-entry</validate>
+				</field>
 			</group>
 		</section>
 	</system>

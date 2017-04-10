@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<config
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='urn:magento:module:Magento_Store:etc/config.xsd'
+>
+    <default>
+		<df_payment>
+			<ipay88>
+				<countries>MY</countries>
+				<country_restriction>whitelist</country_restriction>
+				<currency>MYR</currency>
+				<requireBillingAddress>1</requireBillingAddress>
+				<payment_action>authorize_capture</payment_action>
+				<title>iPay88</title>
+				<title_backend>iPay88</title_backend>
+			</ipay88>
+		</df_payment>
+        <payment>
+            <dfe_ipay88>
+				<model>Dfe\IPay88\Method</model>
+            </dfe_ipay88>
+        </payment>
+    </default>
+</config>
