@@ -9,6 +9,7 @@
 				<countries>MY</countries>
 				<country_restriction>whitelist</country_restriction>
 				<currency>MYR</currency>
+				<description>{store.domain} // {customer.name} // {order.id}</description>
 				<requireBillingAddress>1</requireBillingAddress>
 				<payment_action>authorize_capture</payment_action>
 				<title>iPay88</title>
