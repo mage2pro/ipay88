@@ -10,4 +10,11 @@ final class Method extends \Df\PaypalClone\Method {
 	 * @return null
 	 */
 	protected function amountLimits() {return null;}
+
+	/**
+	 * 2017-04-10
+	 * @used-by \Df\Payment\Method::codeS()
+	 * @see \Df\Payment\Settings::prefix()
+	 */
+	const CODE = 'dfe_ipay88';
 }
