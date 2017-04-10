@@ -21,7 +21,7 @@ final class Charge extends \Df\PaypalClone\Charge {
 		 * @see \Dfe\IPay88\Method::amountFactor()
 		 * @see \Dfe\IPay88\Method::amountFormat()
 		 */
-		'Amount' => $this->amountF()
+		'Amount' => $this->s()->test() ? '1.00' : $this->amountF()
 		// 2017-04-10
 		// «Backend response page URL (refer to 2.7)».
 		// Required, String, 200.
