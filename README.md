@@ -1,4 +1,4 @@
-The extension integrates your Magento 2 store with the **[iPay88](https://www.ipay88.com)** payment service.
+The extension integrates your Magento 2 store with the **[iPay88](https://www.ipay88.com)** payment service (Malaysia, Indonesia, Philippines, Thailand, Singapore, China).
 
 ## How to buy
 The extension is not released yet, so there is no way to buy it just now.  
