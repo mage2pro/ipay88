@@ -11,5 +11,4 @@
 		</arguments>
 	</type>
 	<virtualType name='Dfe\IPay88\Controller\Confirm\Index' type='Df\Payment\W\Action'/>
-	<virtualType name='Dfe\IPay88\Controller\CustomerReturn\Index' type='Df\Payment\CustomerReturn'/>
 </config>
