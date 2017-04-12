@@ -10,8 +10,7 @@ final class Handler extends \Df\PaypalClone\W\Handler {
 	 * and update status to success on merchant system.
 	 * iPay88 OPSG will re-try send the payment status to the ‘backend_response.asp’ page up to 3 times
 	 * on different interval if no ‘RECEIVEOK’ acknowledgement detected.»
-	 * «Online Payment Switching Gateway (OPSG) Technical Specification v1.6.2 (For Malaysia Only).»
-	 * Page 10. https://mage2.pro/t/3682
+	 * «Technical Specification v1.6.2 (For Malaysia Only)» Page 10. https://mage2.pro/t/3682
 	 * @override
 	 * @see \Df\Payment\W\Handler::result()
 	 * @used-by \Df\Payment\W\Handler::handle()
