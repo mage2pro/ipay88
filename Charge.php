@@ -62,10 +62,17 @@ final class Charge extends \Df\PaypalClone\Charge {
 		// «Payment response page».
 		// Required, String, 200.
 		,'ResponseURL' => $this->customerReturnRemote()
-		// 2017-04-10
-		// «Signature type = “SHA256”».
-		// Required, String, 10.
-		,'SignatureType' => 'SHA256'
+		/**
+		 * 2017-04-10
+		 * «Signature type = “SHA256”».
+		 * Required, String, 10.
+		 * 2017-04-12
+		 * Я использую алгоритм @see sha1(),
+		 * поэтому передавать значение параметра «SignatureType» не нужно.
+		 * Т.е. официальная документация врёт, утверждая, что этот параметр обязателен.
+		 * SHA256 — совсем другой алгоритм.
+		 */
+		//,'SignatureType' => 'SHA256'
 		// 2017-04-10
 		// «Customer contact number».
 		// Required, String, 20.
