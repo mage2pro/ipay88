@@ -157,6 +157,27 @@
 					<depends><field id='enable'>1</field></depends>
 				</field>
 				<field
+					id='messageFailure'
+					translate='label'
+					type='Df\Framework\Form\Element\Textarea'
+					dfRows='4'
+					sortOrder='9'
+					showInDefault='1'
+					showInWebsite='1'
+					showInStore='1'
+				>
+					<label>Failure Message</label>
+					<comment><![CDATA[The failure message will be displayed to the customer on the checkout screen when the customer returns from the iPay88 payment page to the store after an unsuccessful payment attempt.
+<br/>You can use HTML tags and the following variables in the template: <table class='df-note'><tbody>
+		<tr>
+			<td>{originalMessage}</td>
+			<td>A message from allPay<br/>(a value of the «<code>ErrDesc</code>» response parameter)</td>
+		</tr>
+</tbody></table>
+]]></comment>
+					<depends><field id='enable'>1</field></depends>
+				</field>
+				<field
 					id='optionsLocation'
 					translate='label'
 					type='select'
