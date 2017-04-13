@@ -1,6 +1,5 @@
 <?php
 namespace Dfe\IPay88\Block;
-use Dfe\IPay88\Source\Option as Opt;
 use Dfe\IPay88\W\Event;
 /**
  * 2017-04-10
@@ -15,7 +14,15 @@ class Info extends \Df\Payment\Block\Info {
 	 * @used-by \Df\Payment\Block\Info::_prepareSpecificInformation()
 	 */
 	final protected function prepare() {
-		$this->si('Payment Option', dftr($this->e()->r('PaymentId'), Opt::s()->all()));
-		$this->siEx('iPay88 ID', $this->e()->idE());
+		/** @var Event $e */
+		$e = $this->e();
+		$this->siEx('iPay88 ID', $e->idE());
+		$this->si('Payment Option', $e->optionTitle());
+		if ($e->isBankCard()) {
+			$this->si([
+				'Card Number' => $e->r('CCNo')
+				,'Cardholder' => $e->r('CCName')
+			]);
+		}
 	}
 }

@@ -1,14 +1,22 @@
 <?php
 namespace Dfe\IPay88\W;
+use Dfe\IPay88\Source\Option as Opt;
 // 2017-04-12
 // «Technical Specification v1.6.2 (For Malaysia Only)» Page 8. https://mage2.pro/t/3682
 // «2.5 Payment Response Parameters»
 final class Event extends \Df\PaypalClone\W\Event {
 	/**
 	 * 2017-04-13
-	 * @return int
+	 * @used-by \Dfe\IPay88\Block\Info::prepare()
+	 * @return string
 	 */
-	function option() {return $this->r('PaymentId');}
+	function optionTitle() {return dftr($this->option(), Opt::s()->all());}
+
+	/**
+	 * 2017-04-13
+	 * @return bool
+	 */
+	function isBankCard() {/** @var int $o */ $o = $this->option(); return 2 === $o || $o > 24 && $o < 43;}
 
 	/**
 	 * 2017-04-12 «iPay88 OPSG Transaction ID»
@@ -64,4 +72,15 @@ final class Event extends \Df\PaypalClone\W\Event {
 	 * @return int
 	 */
 	protected function statusExpected() {return 1;}
+
+	/**
+	 * 2017-04-13
+	 * https://github.com/mage2pro/ipay88/blob/0.2.1/etc/options/myr.json
+	 * https://github.com/mage2pro/ipay88/blob/0.2.1/etc/options/multicurrency.json
+	 * Если не использовать (int), то результат будет строкой, например: "2".
+	 * @used-by isBankCard()
+	 * @used-by optionTitle()
+	 * @return int
+	 */
+	private function option() {return (int)$this->r('PaymentId');}
 }
