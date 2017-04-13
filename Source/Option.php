@@ -9,7 +9,8 @@ final class Option extends \Df\Config\Source {
 	 * @override
 	 * @see \Df\Config\Source::map()
 	 * @used-by \Df\Config\Source::toOptionArray()
+	 * @used-by \Dfe\IPay88\Block\Info::prepare()
 	 * @return array(string => string)
 	 */
-	protected function map() {return df_module_json($this, 'options/myr');}
+	function map() {return df_module_json($this, 'options/myr');}
 }
