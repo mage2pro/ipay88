@@ -19,9 +19,11 @@ class Info extends \Df\Payment\Block\Info {
 		$this->siEx('iPay88 ID', $e->idE());
 		$this->si('Payment Option', $e->optionTitle());
 		if ($e->isBankCard()) {
-			$this->si([
-				'Card Number' => $e->r('CCNo')
-				,'Cardholder' => $e->r('CCName')
+			$this->si(['Card Number' => $e->r('CCNo'), 'Cardholder' => $e->r('CCName')]);
+			$this->siEx([
+				'Bank ID' =>  $e->r('BankMID')
+				,'Bank Name' => $e->r('S_bankname')
+				,'Bank Country' => df_country_ctn($e->r('S_country'))
 			]);
 		}
 	}
