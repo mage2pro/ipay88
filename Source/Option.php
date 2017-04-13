@@ -21,6 +21,7 @@ final class Option extends \Df\Config\Source {
 	 * @see \Df\Config\Source::map()
 	 * @used-by all()
 	 * @used-by \Df\Config\Source::toOptionArray()
+	 * @used-by \Dfe\IPay88\ConfigProvider::config()
 	 * @return array(int => string)
 	 */
 	function map() {return df_module_json($this, 'options/myr');}
