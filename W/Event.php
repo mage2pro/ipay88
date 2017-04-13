@@ -5,6 +5,12 @@ namespace Dfe\IPay88\W;
 // «2.5 Payment Response Parameters»
 final class Event extends \Df\PaypalClone\W\Event {
 	/**
+	 * 2017-04-13
+	 * @return int
+	 */
+	function option() {return $this->r('PaymentId');}
+
+	/**
 	 * 2017-04-12 «iPay88 OPSG Transaction ID»
 	 * @override
 	 * @see \Df\PaypalClone\W\Event::k_idE()
