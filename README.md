@@ -1,5 +1,23 @@
 The extension integrates your Magento 2 store with the **[iPay88](https://www.ipay88.com)** payment service (Malaysia, Indonesia, Philippines, Thailand, Singapore, China).
 
+## The available payment options for Malaysia
+- [Affin Bank](https://www.affinbank.com.my) ([affinOnline](http://www.affinonline.com))
+- [Alliance Bank](http://www.alliancebank.com.my) ([Alliance Online](https://www.allianceonline.com.my))
+- [AmBank](https://www.ambank.com.my) ([AmOnline](https://www.ambank.com.my/eng/online-banking))
+- [Bank Islam](http://www.bankislam.com.my)
+- [Bank Muamalat](http://www.muamalat.com.my)
+- [Bank Rakyat](http://www.bankrakyat.com.my)
+- [Celcom AirCash](https://aircash.celcom.com.my)
+- [CIMB Bank](https://www.cimbbank.com.my) ([CIMB Click](https://www.cimbclicks.com.my))
+- [Hong Leong Bank](https://www.hlb.com.my/main/)
+- [Maybank](http://www.maybank.com) ([Maybank2U](http://www.maybank2u.com.my/))
+- [OCBC](https://www.ocbc.com.my)
+- PayPal (MYR)
+- [RHB Bank](http://www.rhbgroup.com) ([RHB Online](https://logon.rhb.com.my/))
+- [Standard Chartered Bank](https://www.sc.com/my)
+- [United Overseas Bank (UOB)](http://www1.uob.com.my)
+- [Webcash](https://www.webcash.com.my/pages/merchant/merchant-overview)
+
 ## How to buy
 The extension is not released yet, so there is no way to buy it just now.  
 The extension will be released before 2017-04-24.   
