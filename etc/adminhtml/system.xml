@@ -178,20 +178,6 @@
 					<depends><field id='enable'>1</field></depends>
 				</field>
 				<field
-					id='optionsLocation'
-					translate='label'
-					type='select'
-					sortOrder='15'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
-				>
-					<label>Where to ask for a payment option?</label>
-					<source_model>Df\PaypalClone\Source\OptionsLocation</source_model>
-					<comment><![CDATA[]]></comment>
-					<depends><field id='enable'>1</field></depends>
-				</field>
-				<field
 					id='requireBillingAddress'
 					translate='label'
 					type='Df\Framework\Form\Element\Checkbox'
@@ -204,38 +190,6 @@
 					<backend_model>Df\Config\Backend\Checkbox</backend_model>
 					<comment><![CDATA[If <b>checked</b>, Magento will require the billing address. It is the default Magento behaviour.<br/>If <b>unchecked</b>, Magento will not require the billing address, and even will not ask for it.]]></comment>
 					<depends><field id='enable'>1</field></depends>
-				</field>
-				<field
-					id='optionsLimit'
-					translate='label'
-					type='Df\Framework\Form\Element\Checkbox'
-					sortOrder='17'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
-				>
-					<label>Limit Payment Options Availability?</label>
-					<backend_model>Df\Config\Backend\Checkbox</backend_model>
-					<comment><![CDATA[If checked, only the specified options will be shown to the customers.]]></comment>
-					<depends><field id='enable'>1</field></depends>
-				</field>
-				<field
-					id='optionsAllowed'
-					translate='label'
-					type='Df\Framework\Form\Element\Multiselect'
-					sortOrder='18'
-					showInDefault='1'
-					showInWebsite='1'
-					showInStore='1'
-				>
-					<label>Allowed Payment Options</label>
-					<source_model>Dfe\IPay88\Source\Option</source_model>
-					<comment><![CDATA[They will be shown to the customers on the Magento checkout screen or on the IPay88 payment page (it depends on your choice for the «Where to ask for a payment option?» option above).]]></comment>
-					<validate>required-entry</validate>
-					<depends>
-						<field id='enable'>1</field>
-						<field id='optionsLimit'>1</field>
-					</depends>
 				</field>
 				<field
 					id='min_order_total'
