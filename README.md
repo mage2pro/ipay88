@@ -21,8 +21,7 @@ The extension integrates your Magento 2 store with the **[iPay88](https://www.ip
 - [Webcash](https://www.webcash.com.my/pages/merchant/merchant-overview)
 
 ## How to buy
-The extension is not released yet, so there is no way to buy it just now.  
-The extension will be released before 2017-04-24.   
+You can buy it with PayPal [here](https://mage2.pro/t/2775).  
 
 ## How to install
 ### 1. Free installation service
