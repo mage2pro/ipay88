@@ -1,5 +1,7 @@
 The extension integrates your Magento 2 store with the **[iPay88](https://www.ipay88.com)** payment service (Malaysia, Indonesia, Philippines, Thailand, Singapore, China).
 
+![](https://mage2.pro/uploads/default/original/2X/e/eac8a9a71e6fc4868890db9f74d084d47ff2912d.png)
+
 ## The available payment options for Malaysia
 - [Affin Bank](https://www.affinbank.com.my) ([affinOnline](http://www.affinonline.com))
 - [Alliance Bank](http://www.alliancebank.com.my) ([Alliance Online](https://www.allianceonline.com.my))
