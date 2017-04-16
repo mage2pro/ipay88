@@ -33,6 +33,7 @@ abstract class Signer extends \Df\PaypalClone\Signer {
 	 * 2017-04-10
 	 * @override
 	 * @see \Df\PaypalClone\Signer::sign()
+	 * @used-by \Df\PaypalClone\Signer::_sign()
 	 * @return string
 	 */
 	final protected function sign() {return base64_encode(self::hex2bin(sha1(df_cc('',

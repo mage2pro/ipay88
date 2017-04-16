@@ -9,7 +9,7 @@ class Index extends \Df\Payment\CustomerReturn {
 	 * поэтому в момент возвращения покупателя в магазин после неудачной попытки оплаты заказа
 	 * заказ ещё не отменён, и нам нужно именно здесь установить факт неудачности.
 	 * @override
-	 * @see \Df\Payment\CustomerReturn::message()
+	 * @see \Df\Payment\CustomerReturn::isSuccess()
 	 * @used-by \Df\Payment\CustomerReturn::execute()
 	 * @return string
 	 */
