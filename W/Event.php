@@ -7,7 +7,7 @@ use Dfe\IPay88\Source\Option as Opt;
 final class Event extends \Df\PaypalClone\W\Event {
 	/**
 	 * 2017-04-13
-	 * @used-by \Dfe\IPay88\Block\Info::prepare()
+	 * @used-by \Dfe\IPay88\Choice::title()
 	 * @return string
 	 */
 	function optionTitle() {return dftr($this->option(), Opt::s()->all());}
