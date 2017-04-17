@@ -17,7 +17,7 @@ class Info extends \Df\Payment\Block\Info {
 		/** @var Event $e */
 		$e = $this->e();
 		$this->siEx('iPay88 ID', $e->idE());
-		$this->si('Payment Option', $e->optionTitle());
+		$this->si('Payment Option', $this->choiceT());
 		if ($e->isBankCard()) {
 			$this->si(['Card Number' => $e->r('CCNo'), 'Cardholder' => $e->r('CCName')]);
 			$this->siEx([
