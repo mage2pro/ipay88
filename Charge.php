@@ -53,7 +53,7 @@ final class Charge extends \Df\PaypalClone\Charge {
 		// 2017-04-10
 		// «Product description».
 		// Required, String, 100.
-		,'ProdDesc' => mb_substr(df_oi_s($this->o()), 0, 100)
+		,'ProdDesc' => mb_substr(df_oqi_s($this->o()), 0, 100)
 		// 2017-04-10
 		// «Merchant remarks».
 		// Optional, String, 100.
