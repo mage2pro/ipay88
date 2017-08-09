@@ -14,8 +14,7 @@ class Info extends \Df\Payment\Block\Info {
 	 * @used-by \Df\Payment\Block\Info::_prepareSpecificInformation()
 	 */
 	final protected function prepare() {
-		/** @var Event $e */
-		$e = $this->e();
+		$e = $this->e(); /** @var Event $e */
 		$this->siEx('iPay88 ID', $e->idE());
 		$this->si('Payment Option', $this->choiceT());
 		if ($e->isBankCard()) {
