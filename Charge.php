@@ -2,10 +2,33 @@
 namespace Dfe\IPay88;
 /**
  * 2017-04-10
+ * 2017-08-13
+ * The charge parameters are described in the Chapter 2.3 «Payment Request Parameter» (page 6)
+ * of the PDF documentation («Technical Specification v1.6.2 (for Malaysia Only)»): https://mage2.pro/t/4259
  * @method Method m()
  * @method Settings s()
  */
 final class Charge extends \Df\PaypalClone\Charge {
+	/**
+	 * 2017-04-10
+	 * «Unique merchant transaction number / Order ID». Required, String, 30.
+	 * @override
+	 * @see \Df\PaypalClone\Charge::k_RequestId()
+	 * @used-by \Df\PaypalClone\Charge::p()
+	 * @return string
+	 */
+	protected function k_RequestId() {return 'RefNo';}
+
+	/**
+	 * 2017-04-10
+	 * «SHA-256 signature (refer to 3.1)». Required, String, 100.
+	 * @override
+	 * @see \Df\PaypalClone\Charge::k_Signature()
+	 * @used-by \Df\PaypalClone\Charge::p()
+	 * @return string
+	 */
+	protected function k_Signature() {return 'Signature';}
+
 	/**
 	 * 2017-04-10
 	 * @override
@@ -86,24 +109,4 @@ final class Charge extends \Df\PaypalClone\Charge {
 		// Required, String, 100.
 		,'UserName' => $this->customerName()
 	];}
-
-	/**
-	 * 2017-04-10
-	 * «Unique merchant transaction number / Order ID». Required, String, 30.
-	 * @override
-	 * @see \Df\PaypalClone\Charge::k_RequestId()
-	 * @used-by \Df\PaypalClone\Charge::p()
-	 * @return string
-	 */
-	protected function k_RequestId() {return 'RefNo';}
-
-	/**
-	 * 2017-04-10
-	 * «SHA-256 signature (refer to 3.1)». Required, String, 100.
-	 * @override
-	 * @see \Df\PaypalClone\Charge::k_Signature()
-	 * @used-by \Df\PaypalClone\Charge::p()
-	 * @return string
-	 */
-	protected function k_Signature() {return 'Signature';}
 }
