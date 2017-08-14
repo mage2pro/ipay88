@@ -10,6 +10,16 @@
 				<country_restriction>whitelist</country_restriction>
 				<currency>MYR</currency>
 				<description>{store.domain} // {customer.name} // {order.id}</description>
+<!-- 2017-08-13
+*) Param name: `RefNo`
+*) Param type and limitations: «String, 30»
+*) Reference: Chapter 2.3 «Payment Request Parameter» (page 6) of the PDF documentation
+(«Technical Specification v1.6.2 (for Malaysia Only)»): https://mage2.pro/t/3682
+@see \Dfe\IPay88\Charge::k_RequestId() https://github.com/mage2pro/ipay88/blob/1.1.5/Charge.php#L12-L20
+-->
+				<identification_rules>
+					<max_length>30</max_length>
+				</identification_rules>
 				<messageFailure><![CDATA[Sorry, the payment attempt is failed.
 <br/>The payment service's message is «<b>{originalMessage}</b>».
 <br/>Please try again, or try another payment method.]]></messageFailure>
