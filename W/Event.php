@@ -14,6 +14,7 @@ final class Event extends \Df\PaypalClone\W\Event {
 
 	/**
 	 * 2017-04-13
+	 * @used-by \Dfe\IPay88\Block\Info::prepare()
 	 * @return bool
 	 */
 	function isBankCard() {/** @var int $o */ $o = $this->option(); return 2 === $o || $o > 24 && $o < 43;}
@@ -65,6 +66,9 @@ final class Event extends \Df\PaypalClone\W\Event {
 
 	/**
 	 * 2017-04-12 «“1” – Success, “0” – Fail»
+	 * 2017-08-14
+	 * As I understand from the documentation,
+	 * the iPay88 payments are always instant: there are no offine / pending payments.
 	 * @override
 	 * @see \Df\PaypalClone\W\Event::statusExpected()
 	 * @used-by \Df\PaypalClone\W\Event::isSuccessful()
