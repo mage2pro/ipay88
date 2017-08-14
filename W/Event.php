@@ -40,7 +40,6 @@ final class Event extends \Df\PaypalClone\W\Event {
 	 * 2017-04-12 «SHA-256 signature (refer to 3.2)»
 	 * @override
 	 * @see \Df\PaypalClone\W\Event::k_signature()
-	 * @see \Dfe\IPay88\W\Event::k_signature()
 	 * @used-by \Df\PaypalClone\W\Event::signatureProvided()
 	 * @return string
 	 */
