@@ -10,6 +10,18 @@ namespace Dfe\IPay88;
  */
 final class Charge extends \Df\PaypalClone\Charge {
 	/**
+	 * 2017-08-19   
+	 * 2017-04-10
+	 * «The Merchant Code provided by iPay88 and use to uniquely identify the Merchant.»
+	 * Required, String, 20.
+	 * @override
+	 * @see \Df\PaypalClone\Charge::k_MerchantId()
+	 * @used-by \Df\PaypalClone\Charge::p()
+	 * @return string
+	 */
+	protected function k_MerchantId() {return 'MerchantCode';}
+	
+	/**
 	 * 2017-04-10
 	 * «Unique merchant transaction number / Order ID». Required, String, 30.
 	 * @override
@@ -64,10 +76,6 @@ final class Charge extends \Df\PaypalClone\Charge {
 		// ».
 		// Optional, String, 20.
 		,'Lang' => 'UTF-8'
-		// 2017-04-10
-		// «The Merchant Code provided by iPay88 and use to uniquely identify the Merchant.»
-		// Required, String, 20.
-		,'MerchantCode' => $s->publicKey()
 		// 2017-04-10
 		// «Refer to Appendix I.pdf file for MYR gateway.
 		// Refer to Appendix II.pdf file for Multi-curency gateway.».

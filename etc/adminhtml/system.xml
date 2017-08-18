@@ -57,7 +57,7 @@
 					<depends><field id='enable'>1</field></depends>
 				</field>
 				<field
-					id='testPublicKey'
+					id='testMerchantID'
 					showInDefault='1' showInStore='1' showInWebsite='1'
 					sortOrder='4'
 					translate='label'
@@ -88,7 +88,7 @@
 					<validate>required-entry</validate>
 				</field>
 				<field
-					id='livePublicKey'
+					id='liveMerchantID'
 					showInDefault='1' showInStore='1' showInWebsite='1'
 					sortOrder='6'
 					translate='label'
