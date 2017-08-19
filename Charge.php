@@ -10,6 +10,18 @@ namespace Dfe\IPay88;
  */
 final class Charge extends \Df\PaypalClone\Charge {
 	/**
+	 * 2017-08-19
+	 * 2017-04-10 «Payment amount with two decimals and thousand symbols. Example: 1,278.99» Required, Currency.
+	 * @see \Dfe\IPay88\Method::amountFactor()
+	 * @see \Dfe\IPay88\Method::amountFormat()
+	 * @override
+	 * @see \Df\PaypalClone\Charge::k_Amount()
+	 * @used-by \Df\PaypalClone\Charge::p()
+	 * @return string
+	 */
+	protected function k_Amount() {return 'Amount';}
+
+	/**
 	 * 2017-08-19   
 	 * 2017-04-10
 	 * «The Merchant Code provided by iPay88 and use to uniquely identify the Merchant.»
@@ -49,18 +61,10 @@ final class Charge extends \Df\PaypalClone\Charge {
 	 * @return array(string => mixed)
 	 */
 	protected function pCharge() {$s = $this->s(); return [
-		/**
-		 * 2017-04-10
-		 * «Payment amount with two decimals and thousand symbols. Example: 1,278.99»
-		 * Required, Currency.
-		 * @see \Dfe\IPay88\Method::amountFactor()
-		 * @see \Dfe\IPay88\Method::amountFormat()
-		 */
-		'Amount' => $s->test() ? '1.00' : $this->amountF()
 		// 2017-04-10
 		// «Backend response page URL (refer to 2.7)».
 		// Required, String, 200.
-		,'BackendURL' => $this->callback()
+		'BackendURL' => $this->callback()
 		// 2017-04-10
 		// «Refer to Appendix I.pdf file for MYR gateway.
 		// Refer to Appendix II.pdf file for Multi-curency gateway.».
@@ -117,4 +121,13 @@ final class Charge extends \Df\PaypalClone\Charge {
 		// Required, String, 100.
 		,'UserName' => $this->customerName()
 	];}
+
+	/**
+	 * 2017-08-19
+	 * @override
+	 * @see \Df\PaypalClone\Charge::testAmountF()
+	 * @used-by \Df\PaypalClone\Charge::p()
+	 * @return string
+	 */
+	protected function testAmountF() {return '1.00';}
 }
