@@ -20,6 +20,19 @@ final class Charge extends \Df\PaypalClone\Charge {
 	 * @return string
 	 */
 	protected function k_Amount() {return 'Amount';}
+	
+	/**
+	 * 2017-08-19
+	 * 2017-04-10
+	 * «Refer to Appendix I.pdf file for MYR gateway.
+	 * Refer to Appendix II.pdf file for Multi-curency gateway.».
+	 * Required, String, 5.
+	 * @override
+	 * @see \Df\PaypalClone\Charge::k_Currency()
+	 * @used-by \Df\PaypalClone\Charge::p()
+	 * @return string
+	 */
+	protected function k_Currency() {return 'Currency';}
 
 	/**
 	 * 2017-08-19   
@@ -60,16 +73,11 @@ final class Charge extends \Df\PaypalClone\Charge {
 	 * @used-by \Df\PaypalClone\Charge::p()
 	 * @return array(string => mixed)
 	 */
-	protected function pCharge() {$s = $this->s(); return [
+	protected function pCharge() {return [
 		// 2017-04-10
 		// «Backend response page URL (refer to 2.7)».
 		// Required, String, 200.
 		'BackendURL' => $this->callback()
-		// 2017-04-10
-		// «Refer to Appendix I.pdf file for MYR gateway.
-		// Refer to Appendix II.pdf file for Multi-curency gateway.».
-		// Required, String, 5.
-		,'Currency' => $this->currencyC()
 		// 2017-04-10
 		// «Encoding type
 		//		“ISO-8859-1” – English
