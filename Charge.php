@@ -35,6 +35,16 @@ final class Charge extends \Df\PaypalClone\Charge {
 	protected function k_Currency() {return 'Currency';}
 
 	/**
+	 * 2017-08-19
+	 * 2017-04-10 «Customer email for receiving receipt». Required, String, 100.
+	 * @override
+	 * @see \Df\PaypalClone\Charge::k_Email()
+	 * @used-by \Df\PaypalClone\Charge::p()
+	 * @return string
+	 */
+	protected function k_Email() {return 'UserEmail';}
+
+	/**
 	 * 2017-08-19   
 	 * 2017-04-10
 	 * «The Merchant Code provided by iPay88 and use to uniquely identify the Merchant.»
@@ -120,13 +130,7 @@ final class Charge extends \Df\PaypalClone\Charge {
 		// «Customer contact number».
 		// Required, String, 20.
 		,'UserContact' => mb_substr($this->addressBS()->getTelephone(), 0, 100) ?: 'absent'
-		// 2017-04-10
-		// «Customer email for receiving receipt».
-		// Required, String, 100.
-		,'UserEmail' => $this->customerEmail()
-		// 2017-04-10
-		// «Customer name».
-		// Required, String, 100.
+		// 2017-04-10 «Customer name». Required, String, 100.
 		,'UserName' => $this->customerName()
 	];}
 
