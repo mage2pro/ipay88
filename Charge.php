@@ -134,6 +134,10 @@ final class Charge extends \Df\PaypalClone\Charge {
 
 	/**
 	 * 2017-08-19
+	 * 2017-09-01
+	 * «Test transaction with amount MYR 1.00».
+	 * The PDF documentation («Technical Specification v1.6.2 (for Malaysia Only)»), page 2:
+	 * https://mage2.pro/t/4259
 	 * @override
 	 * @see \Df\PaypalClone\Charge::testAmountF()
 	 * @used-by \Df\PaypalClone\Charge::p()
