@@ -125,9 +125,8 @@ final class Charge extends \Df\PaypalClone\Charge {
 		 */
 		//,'SignatureType' => 'SHA256'
 		// 2017-04-10 «Customer contact number». Required, String, 20.
-		,'UserContact' => mb_substr($this->addressBS()->getTelephone(), 0, 100) ?: 'absent'
-		// 2017-04-10 «Customer name». Required, String, 100.
-		,'UserName' => $this->customerName()
+		,'UserContact' => df_chop($this->addressBS()->getTelephone(), 0, 20) ?: 'absent'
+		,'UserName' => $this->customerName() // 2017-04-10 «Customer name». Required, String, 100.
 	];}
 
 	/**
