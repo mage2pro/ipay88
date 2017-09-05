@@ -110,7 +110,7 @@ final class Charge extends \Df\PaypalClone\Charge {
 		// 2017-09-04
 		// [iPay88] The maximum length of a payment description
 		// (the «Remark» parameter) is 100 characters: https://mage2.pro/t/4459
-		,'Remark' => $this->description(100)
+		,'Remark' => $this->description()
 		// 2017-04-10 «Payment response page». Required, String, 200.
 		,'ResponseURL' => $this->customerReturnRemote()
 		/**
