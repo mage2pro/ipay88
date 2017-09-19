@@ -23,6 +23,7 @@
 				<messageFailure><![CDATA[Sorry, the payment attempt is failed.
 <br/>The payment service's message is «<b>{originalMessage}</b>».
 <br/>Please try again, or try another payment method.]]></messageFailure>
+				<optionsPrompt><![CDATA[Please select a payment option:]]></optionsPrompt>
 				<requireBillingAddress>1</requireBillingAddress>
 				<payment_action>authorize_capture</payment_action>
 				<title>iPay88</title>

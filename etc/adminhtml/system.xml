@@ -136,10 +136,23 @@ because the value can contain variables, so do not know the real length here. --
 					<depends><field id='enable'>1</field></depends>
 				</field>
 				<field
+					id='optionsPrompt'
+					showInDefault='1' showInStore='1' showInWebsite='1'
+					sortOrder='9'
+					translate='label'
+					type='textarea'
+				>
+					<label>Options Prompt</label>
+					<comment><![CDATA[A text above the iPay88 payment options on the Magento checkout page.<br/>You can use the HTML tags. Also you set the desciption empty to hide it.]]></comment>
+					<depends>
+						<field id='enable'>1</field>
+					</depends>
+				</field>
+				<field
 					dfRows='4'
 					id='messageFailure'
 					showInDefault='1' showInStore='1' showInWebsite='1'
-					sortOrder='9'
+					sortOrder='10'
 					translate='label'
 					type='Df\Framework\Form\Element\Textarea'
 				>
