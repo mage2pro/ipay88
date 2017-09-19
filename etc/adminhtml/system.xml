@@ -143,7 +143,7 @@ because the value can contain variables, so do not know the real length here. --
 					type='textarea'
 				>
 					<label>Options Prompt</label>
-					<comment><![CDATA[A text above the iPay88 payment options on the Magento checkout page.<br/>You can use the HTML tags. Also you set the desciption empty to hide it.]]></comment>
+					<comment><![CDATA[A text above the iPay88 payment options on the Magento checkout page.<br/>You can use the HTML tags. Also you set the prompt empty to hide it.]]></comment>
 					<depends>
 						<field id='enable'>1</field>
 					</depends>
