@@ -175,7 +175,7 @@ because the value can contain variables, so do not know the real length here. --
 <br/>You can use HTML tags and the following variables in the template: <table class='df-note'><tbody>
 		<tr>
 			<td>{originalMessage}</td>
-			<td>A message from allPay<br/>(a value of the «<code>ErrDesc</code>» response parameter)</td>
+			<td>A message from iPay88<br/>(a value of the «<code>ErrDesc</code>» response parameter)</td>
 		</tr>
 </tbody></table>
 ]]></comment>
