@@ -149,10 +149,24 @@ because the value can contain variables, so do not know the real length here. --
 					</depends>
 				</field>
 				<field
+					id='optionsDisplayMode'
+					showInDefault='1' showInStore='1' showInWebsite='1'
+					sortOrder='10'
+					translate='label'
+					type='select'
+				>
+					<label>The payment options display mode</label>
+					<comment><![CDATA[]]></comment>
+					<depends>
+						<field id='enable'>1</field>
+					</depends>
+					<source_model>Df\Payment\Source\Options\DisplayMode</source_model>
+				</field>
+				<field
 					dfRows='4'
 					id='messageFailure'
 					showInDefault='1' showInStore='1' showInWebsite='1'
-					sortOrder='10'
+					sortOrder='11'
 					translate='label'
 					type='Df\Framework\Form\Element\Textarea'
 				>
