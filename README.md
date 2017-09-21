@@ -14,7 +14,7 @@ https://www.youtube.com/watch?v=hgg7cu9y57c&list=PLTq8uOpBQGsEVWfTrncggf2XnngZYa
 ![](https://mage2.pro/uploads/default/original/2X/1/1dee0f99fb61c022e5ce5ab7b59df4287a15e224.png)
 
 ### Backend settings
-![](https://mage2.pro/uploads/default/original/2X/0/004d209981afe8955ec72c1431cfbeb8110f985a.png)
+![](https://mage2.pro/uploads/default/original/2X/e/edc62823e702fca503027ea8625a644aa74d7560.png)
 
 ## The available payment options for Malaysia
 - [Affin Bank](https://www.affinbank.com.my) ([affinOnline](http://www.affinonline.com))
