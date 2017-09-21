@@ -16,75 +16,81 @@ form.dfe_ipay88 {
 			column-gap: 2em;
 		}
 	}
-	.df-choice label {display: inline-block; color: transparent;}
-	// 2017-04-14 Bank Card
-	.df-option-2 label {
-		background: url('./i/bank-card.png') center no-repeat;
-		width: 200px; height: 42px; padding: 4px 0;
+	// 2017-09-21
+	// This style is set when the «The payment options display mode» option has the «images» value.
+	// @see Df_Payment/withOptions::containerCss():
+	//		'withOptions-displayMode-' + this.config('optionsDisplayMode')
+	.withOptions-displayMode-images & {
+		.df-choice label {display: inline-block; color: transparent;}
+		// 2017-04-14 Bank Card
+		.df-option-2 label {
+			background: url('./i/bank-card.png') center no-repeat;
+			width: 200px; height: 42px; padding: 4px 0;
+		}
+		// 2017-04-13 Maybank (Maybank2U)
+		.df-option-6 label {background: url('./i/maybank.png'); width: 200px; height: 54px;}
+		// 2017-04-13 Alliance Bank (Alliance Online)
+		.df-option-8 label {
+			background: url('./i/alliance-bank.png') center no-repeat;
+			width: 193px; height: 32px; padding: 9px 0;
+		}
+		// 2017-04-13 AmBank (AmOnline)
+		.df-option-10 label {background: url('./i/ambank.png'); width: 91px; height: 63px;}
+		// 2017-04-13 RHB Bank (RHB Online)
+		.df-option-14 label {
+			background: url('./i/rhb-bank.png') center no-repeat;
+			width: 112px; height: 36px; padding: 6px 0;
+		}
+		// 2017-04-14 Hong Leong Bank (Hong Leong Online)
+		.df-option-15 label {
+			background: url('./i/hong-leong-bank.png') center no-repeat;
+			width: 200px; height: 39px; padding: 6px 0 5px 0;
+		}
+		// 2017-04-14 CIMB Bank
+		.df-option-20 label {
+			background: url('./i/cimb-bank.png') center no-repeat;
+			width: 200px; height: 32px; padding: 11px 0;
+		}
+		// 2017-04-14 Webcash
+		.df-option-22 label {
+			background: url('./i/webcash.png') center no-repeat;
+			width: 175px; height: 48px; padding: 1px 0;
+		}
+		// 2017-04-14 PayPal (MYR)
+		.df-option-48 label {
+			background: url('./i/paypal.png') center no-repeat;
+			width: 184px; height: 45px; padding: 3px 0 2px 0;
+		}
+		// 2017-04-14 Celcom AirCash
+		.df-option-100 label {
+			background: url('./i/celcom-aircash.png') center no-repeat;
+			width: 176px; height: 40px; padding: 5px 0
+		}
+		// 2017-04-14 Bank Rakyat Internet Banking
+		.df-option-102 label {
+			background: url('./i/bank-rakyat.png') center no-repeat;
+			width: 200px; height: 45px; padding: 3px 0 2px 0;
+		}
+		// 2017-04-14 Affin Bank (affinOnline)
+		.df-option-103 label {background: url('./i/affin-bank.png');  width: 200px; height: 51px;}
+		// 2017-04-14 Bank Islam
+		.df-option-134 label {
+			background: url('./i/bank-islam.png') center no-repeat;
+			width: 200px; height: 46px; padding: 2px 0;
+		}
+		// 2017-04-14 United Overseas Bank (UOB)
+		.df-option-152 label {background: url('./i/uob.png');  width: 143px; height: 50px;}
+		// 2017-04-14 Bank Muamalat
+		.df-option-166 label {
+			background: url('./i/bank-muamalat.png') center no-repeat;
+			width: 200px; height: 40px; padding: 5px 0;
+		}
+		// 2017-04-14 OCBC
+		.df-option-167 label {
+			background: url('./i/ocbc.png') center no-repeat;
+			width: 200px; height: 42px; padding: 4px 0;
+		}
+		// 2017-04-14 Standard Chartered Bank
+		.df-option-168 label {background: url('./i/standard-chartered-bank.png');  width: 158px; height: 50px;}
 	}
-	// 2017-04-13 Maybank (Maybank2U)
-	.df-option-6 label {background: url('./i/maybank.png'); width: 200px; height: 54px;}
-	// 2017-04-13 Alliance Bank (Alliance Online)
-	.df-option-8 label {
-		background: url('./i/alliance-bank.png') center no-repeat;
-		width: 193px; height: 32px; padding: 9px 0;
-	}
-	// 2017-04-13 AmBank (AmOnline)
-	.df-option-10 label {background: url('./i/ambank.png'); width: 91px; height: 63px;}
-	// 2017-04-13 RHB Bank (RHB Online)
-	.df-option-14 label {
-		background: url('./i/rhb-bank.png') center no-repeat;
-		width: 112px; height: 36px; padding: 6px 0;
-	}
-	// 2017-04-14 Hong Leong Bank (Hong Leong Online)
-	.df-option-15 label {
-		background: url('./i/hong-leong-bank.png') center no-repeat;
-		width: 200px; height: 39px; padding: 6px 0 5px 0;
-	}
-	// 2017-04-14 CIMB Bank
-	.df-option-20 label {
-		background: url('./i/cimb-bank.png') center no-repeat;
-		width: 200px; height: 32px; padding: 11px 0;
-	}
-	// 2017-04-14 Webcash
-	.df-option-22 label {
-		background: url('./i/webcash.png') center no-repeat;
-		width: 175px; height: 48px; padding: 1px 0;
-	}
-	// 2017-04-14 PayPal (MYR)
-	.df-option-48 label {
-		background: url('./i/paypal.png') center no-repeat;
-		width: 184px; height: 45px; padding: 3px 0 2px 0;
-	}
-	// 2017-04-14 Celcom AirCash
-	.df-option-100 label {
-		background: url('./i/celcom-aircash.png') center no-repeat;
-		width: 176px; height: 40px; padding: 5px 0
-	}
-	// 2017-04-14 Bank Rakyat Internet Banking
-	.df-option-102 label {
-		background: url('./i/bank-rakyat.png') center no-repeat;
-		width: 200px; height: 45px; padding: 3px 0 2px 0;
-	}
-	// 2017-04-14 Affin Bank (affinOnline)
-	.df-option-103 label {background: url('./i/affin-bank.png');  width: 200px; height: 51px;}
-	// 2017-04-14 Bank Islam
-	.df-option-134 label {
-		background: url('./i/bank-islam.png') center no-repeat;
-		width: 200px; height: 46px; padding: 2px 0;
-	}
-	// 2017-04-14 United Overseas Bank (UOB)
-	.df-option-152 label {background: url('./i/uob.png');  width: 143px; height: 50px;}
-	// 2017-04-14 Bank Muamalat
-	.df-option-166 label {
-		background: url('./i/bank-muamalat.png') center no-repeat;
-		width: 200px; height: 40px; padding: 5px 0;
-	}
-	// 2017-04-14 OCBC
-	.df-option-167 label {
-		background: url('./i/ocbc.png') center no-repeat;
-		width: 200px; height: 42px; padding: 4px 0;
-	}
-	// 2017-04-14 Standard Chartered Bank
-	.df-option-168 label {background: url('./i/standard-chartered-bank.png');  width: 158px; height: 50px;}
 }
