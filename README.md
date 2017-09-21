@@ -3,12 +3,15 @@ The extension integrates your Magento 2 store with the **[iPay88](https://www.ip
 ## Demo video
 https://www.youtube.com/watch?v=hgg7cu9y57c&list=PLTq8uOpBQGsEVWfTrncggf2XnngZYaUJa
 
-## Screenshots
+## [Screenshots](https://mage2.pro/tags/ipay88-screenshots)
 - The frontend checkout screen:
 	- [The «**images**» mode](https://mage2.pro/t/topic/4540)
 	- [The «**text**» mode](https://mage2.pro/t/topic/4539)
-- [The payment information blocks](https://mage2.pro/t/topic/4543)
+- [The payment information** blocks](https://mage2.pro/t/topic/4543)
 - [The backend settings](https://mage2.pro/t/topic/4542)
+- [The bank card payment form](https://mage2.pro/t/topic/3683)
+- [An email receipt to a buyer](https://mage2.pro/t/topic/3684)
+- [An email payment notification for a merchant](https://mage2.pro/t/topic/3685)
 
 ## The available payment options for Malaysia
 - [Affin Bank](https://www.affinbank.com.my) ([affinOnline](http://www.affinonline.com))
