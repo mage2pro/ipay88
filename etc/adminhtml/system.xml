@@ -156,7 +156,7 @@ because the value can contain variables, so do not know the real length here. --
 					type='select'
 				>
 					<label>Payment options display mode</label>
-					<comment><![CDATA[]]></comment>
+					<comment><![CDATA[See the screenshots:<ul class='df-note'><li><a href='https://mage2.pro/t/4540' target='_blank'>the «<b>images</b>» mode</a></li><li><a href='https://mage2.pro/t/4539' target='_blank'>the «<b>text</b>» mode</a></li></ul>]]></comment>
 					<depends>
 						<field id='enable'>1</field>
 					</depends>
