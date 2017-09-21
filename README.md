@@ -5,8 +5,8 @@ https://www.youtube.com/watch?v=hgg7cu9y57c&list=PLTq8uOpBQGsEVWfTrncggf2XnngZYa
 
 ## [Screenshots](https://mage2.pro/tags/ipay88-screenshots)
 - The frontend checkout screen:
-	- [The «**images**» mode](https://mage2.pro/t/topic/4540)
-	- [The «**text**» mode](https://mage2.pro/t/topic/4539)
+	- [in the «**images**» mode](https://mage2.pro/t/topic/4540)
+	- [in the «**text**» mode](https://mage2.pro/t/topic/4539)
 - [The payment information** blocks](https://mage2.pro/t/topic/4543)
 - [The backend settings](https://mage2.pro/t/topic/4542)
 - [The bank card payment form](https://mage2.pro/t/topic/3683)
