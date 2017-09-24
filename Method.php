@@ -57,8 +57,7 @@ final class Method extends \Df\PaypalClone\Method {
 	const CODE = 'dfe_ipay88';
 
 	/**
-	 * 2017-04-14
-	 * https://github.com/mage2pro/core/blob/2.0.36/Payment/view/frontend/web/withOptions.js?ts=4#L23
+	 * 2017-04-14 https://github.com/mage2pro/core/blob/2.12.17/Payment/view/frontend/web/withOptions.js#L56-L72
 	 * @used-by iiaKeys()
 	 * @used-by option()
 	 */
