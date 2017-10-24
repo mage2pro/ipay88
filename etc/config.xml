@@ -27,7 +27,6 @@
 				<optionsLocation>magento</optionsLocation>
 				<optionsPrompt><![CDATA[Please select a payment option:]]></optionsPrompt>
 				<requireBillingAddress>1</requireBillingAddress>
-				<payment_action>authorize_capture</payment_action>
 				<title>iPay88</title>
 				<title_backend>iPay88</title_backend>
 			</ipay88>
