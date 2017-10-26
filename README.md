@@ -3,7 +3,7 @@ The extension integrates your Magento 2 store with the **[iPay88](https://www.ip
 ## Demo video
 https://www.youtube.com/watch?v=hgg7cu9y57c&list=PLTq8uOpBQGsEVWfTrncggf2XnngZYaUJa
 
-## [Screenshots](https://mage2.pro/tags/ipay88-screenshots)
+## [Screenshots](https://mage2.pro/tags/ipay88-screenshot)
 - The frontend checkout screen:
 	- [in the «**images**» mode](https://mage2.pro/t/topic/4540)
 	- [in the «**text**» mode](https://mage2.pro/t/topic/4539)
