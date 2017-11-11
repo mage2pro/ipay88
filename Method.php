@@ -1,15 +1,8 @@
 <?php
 namespace Dfe\IPay88;
-/**
- * 2017-04-10
- * 2017-11-10
- * «Class Dfe\IPay88\Method\Interceptor may not inherit from final class (Dfe\IPay88\Method)
- * in /generated/code/Dfe/IPay88/Method/Interceptor.php»
- * https://mage2.pro/t/4904
- * @final Unable to use the PHP «final» keyword here because of the M2 code generation.
- * @method Settings s()
- */
-class Method extends \Df\PaypalClone\Method {
+// 2017-04-10
+/** @method Settings s() */
+final class Method extends \Df\PaypalClone\Method {
 	/**
 	 * 2017-04-10
 	 * «Payment amount with two decimals and thousand symbols. Example: 1,278.99»
