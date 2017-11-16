@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\IPay88\W;
-use Df\Framework\Controller\Response\Text;
+use Df\Framework\W\Response\Text;
 // 2017-09-13
 final class Responder extends \Df\Payment\W\Responder {
 	/**
