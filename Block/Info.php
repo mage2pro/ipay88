@@ -11,7 +11,7 @@ class Info extends \Df\Payment\Block\Info {
 	 * 2017-04-10
 	 * @override
 	 * @see \Df\Payment\Block\Info::prepare()
-	 * @used-by \Df\Payment\Block\Info::_prepareSpecificInformation()
+	 * @used-by \Df\Payment\Block\Info::prepareToRendering()
 	 */
 	final protected function prepare() {
 		$e = $this->e(); /** @var Event $e */
