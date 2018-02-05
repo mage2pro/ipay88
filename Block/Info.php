@@ -14,16 +14,24 @@ class Info extends \Df\Payment\Block\Info {
 	 * @used-by \Df\Payment\Block\Info::prepareToRendering()
 	 */
 	final protected function prepare() {
-		$e = $this->e(); /** @var Event $e */
-		$this->siEx('iPay88 ID', $e->idE());
-		$this->si('Payment Option', $this->choiceT());
-		if ($e->isBankCard()) {
-			$this->si(['Card Number' => $e->r('CCNo'), 'Cardholder' => $e->r('CCName')]);
-			$this->siEx([
-				'Bank ID' =>  $e->r('BankMID')
-				,'Bank Name' => $e->r('S_bankname')
-				,'Bank Country' => df_country_ctn($e->r('S_country'))
-			]);
+		/**
+		 * 2018-02-06
+		 * "Clicking the «Invoice» backend button for an order in the «Pending» state
+		 * leads to the «Call to a member function idE() on null
+		 * in vendor/mage2pro/ipay88/Block/Info.php:18» error":
+		 * https://github.com/mage2pro/ipay88/issues/8
+		 */
+		if ($e = $this->e() /** @var Event $e */) {
+			$this->siEx('iPay88 ID', $e->idE());
+			$this->si('Payment Option', $this->choiceT());
+			if ($e->isBankCard()) {
+				$this->si(['Card Number' => $e->r('CCNo'), 'Cardholder' => $e->r('CCName')]);
+				$this->siEx([
+					'Bank ID' =>  $e->r('BankMID')
+					,'Bank Name' => $e->r('S_bankname')
+					,'Bank Country' => df_country_ctn($e->r('S_country'))
+				]);
+			}
 		}
 	}
 }
