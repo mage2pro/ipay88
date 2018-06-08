@@ -25,17 +25,18 @@ class Info extends \Df\Payment\Block\Info {
 			$this->siEx('iPay88 ID', $e->idE());
 			$this->si('Payment Option', $this->choiceT());
 			if ($e->isBankCard()) {
-				$country = $e->r('S_country');
-
-				if (!empty($country)) {
-					$country = df_country_ctn($country);
-				}
-
 				$this->si(['Card Number' => $e->r('CCNo'), 'Cardholder' => $e->r('CCName')]);
 				$this->siEx([
 					'Bank ID' =>  $e->r('BankMID')
 					,'Bank Name' => $e->r('S_bankname')
-					,'Bank Country' => $country
+					/**
+					 * 2018-06-08
+					 * «Do not run df_country_ctn() if S_country is empty»:
+					 * https://github.com/mage2pro/ipay88/pull/12
+					 * https://github.com/mage2pro/ipay88/issues/11
+					 * @var string $c
+					 */
+					,'Bank Country' => !($c = $e->r('S_country')) ? __('Unknown') : df_country_ctn($c)
 				]);
 			}
 		}
