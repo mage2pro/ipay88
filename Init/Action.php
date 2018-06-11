@@ -5,10 +5,14 @@ namespace Dfe\IPay88\Init;
 final class Action extends \Df\PaypalClone\Init\Action {
 	/**
 	 * 2017-04-10
+	 * 2018-06-11
+	 * «All integration using URL https://www.mobile88.com
+	 * should switch to https://payment.ipay88.com.my effective 1st June 2018.»
+	 * https://github.com/mage2pro/ipay88/issues/13
 	 * @override
 	 * @see \Df\Payment\Init\Action::redirectUrl()
 	 * @used-by \Df\Payment\Init\Action::action()
 	 * @return string
 	 */
-	protected function redirectUrl() {return 'https://www.mobile88.com/epayment/entry.asp';}
+	protected function redirectUrl() {return 'https://payment.ipay88.com.my/epayment/entry.asp';}
 }
