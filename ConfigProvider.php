@@ -1,8 +1,8 @@
 <?php
 namespace Dfe\IPay88;
 use Df\Payment\ConfigProvider\IOptions;
-use Dfe\IPay88\Source\Option as Opt;
 // 2017-04-10
+/** @method Settings s() */
 final class ConfigProvider extends \Df\Payment\ConfigProvider implements IOptions {
 	/**
 	 * 2017-09-18
@@ -11,7 +11,7 @@ final class ConfigProvider extends \Df\Payment\ConfigProvider implements IOption
 	 * @used-by \Df\Payment\ConfigProvider::configOptions()
 	 * @return array(<value> => <label>)
 	 */
-	function options() {return Opt::s()->map();}
+	function options() {return $this->s()->options()->o(true);}
 
 	/**
 	 * 2017-04-13
