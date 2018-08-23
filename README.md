@@ -7,7 +7,7 @@ https://www.youtube.com/watch?v=hgg7cu9y57c&list=PLTq8uOpBQGsEVWfTrncggf2XnngZYa
 - The frontend checkout screen:
 	- [in the «**images**» mode](https://mage2.pro/t/topic/4540)
 	- [in the «**text**» mode](https://mage2.pro/t/topic/4539)
-- [The payment information** blocks](https://mage2.pro/t/topic/4543)
+- [The **payment information** blocks](https://mage2.pro/t/topic/4543)
 - [The backend settings](https://mage2.pro/t/topic/4542)
 - [The bank card payment form](https://mage2.pro/t/topic/3683)
 - [An email receipt to a buyer](https://mage2.pro/t/topic/3684)
