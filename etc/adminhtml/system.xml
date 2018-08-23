@@ -171,10 +171,39 @@ because the value can contain variables, so do not know the real length here. --
 					<source_model>Df\Payment\Source\Options\DisplayMode</source_model>
 				</field>
 				<field
+					id='optionsLimit'
+					showInDefault='1' showInStore='1' showInWebsite='1'
+					sortOrder='11'
+					translate='label'
+					type='Df\Framework\Form\Element\Checkbox'
+				>
+					<label>Limit the payment options availability?</label>
+					<backend_model>Df\Config\Backend\Checkbox</backend_model>
+					<comment><![CDATA[If checked, only the selected options will be shown to the customers.]]></comment>
+					<depends><field id='enable'>1</field></depends>
+				</field>
+				<field
+					dfMultiselect_ordered='true'
+					id='optionsAllowed'
+					showInDefault='1' showInStore='1' showInWebsite='1'
+					sortOrder='12'
+					translate='label'
+					type='Df\Framework\Form\Element\Multiselect'
+				>
+					<label>Allowed Payment Options</label>
+					<source_model>Dfe\IPay88\Source\Option</source_model>
+					<comment><![CDATA[Only the selected options will be shown to the customers on the Magento checkout screen or on the allPay payment page (it depends on your choice for the «Where to ask for a payment option?» option above).<br/>You can <b>reorder</b> the options by drag and drop.]]></comment>
+					<validate>required-entry</validate>
+					<depends>
+						<field id='enable'>1</field>
+						<field id='optionsLimit'>1</field>
+					</depends>
+				</field>
+				<field
 					dfRows='4'
 					id='messageFailure'
 					showInDefault='1' showInStore='1' showInWebsite='1'
-					sortOrder='11'
+					sortOrder='13'
 					translate='label'
 					type='Df\Framework\Form\Element\Textarea'
 				>
