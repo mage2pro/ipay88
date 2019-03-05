@@ -17,13 +17,4 @@ class UpgradeData extends \Df\Framework\Upgrade\Data {
 		");
 		df_cache_clean();
 	}
-
-	/**
-	 * 2017-08-19
-	 * @override
-	 * @see \Df\Framework\Upgrade::initial()
-	 * @used-by \Df\Framework\Upgrade::isInitial()
-	 * @return string
-	 */
-	final protected function initial() {return '0.0.1';}
 }
