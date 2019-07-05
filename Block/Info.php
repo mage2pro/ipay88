@@ -20,6 +20,12 @@ class Info extends \Df\Payment\Block\Info {
 		 * leads to the «Call to a member function idE() on null
 		 * in vendor/mage2pro/ipay88/Block/Info.php:18» error":
 		 * https://github.com/mage2pro/ipay88/issues/8
+		 * 2019-07-05
+		 * All these methods return `null` when a backend user clicks the «Invoice» backend button
+		 * for an order in the «Pending» state:
+		 * @see \Df\Payment\Block\Info::e()
+		 * @see \Df\Payment\TM::responseF()
+		 * @see \Df\Payment\TM::responseL()
 		 */
 		if ($e = $this->e() /** @var Event $e */) {
 			$this->siEx('iPay88 ID', $e->idE());
