@@ -277,11 +277,7 @@ because the value can contain variables, so do not know the real length here. --
 					<can_be_empty>1</can_be_empty>
 					<depends>
 						<field id='enable'>1</field>
-<!--
-2016-03-08
-«The negative syntax for a backend config field <depends> condition»
-https://mage2.pro/t/329
--->
+<!-- 2016-03-08 «The negative syntax for a backend config field <depends> condition» https://mage2.pro/t/329 -->
 						<field id='country_restriction' negative='1'>0</field>
 					</depends>
 					<comment><![CDATA[Customers from which countries can (or can not) use the method?]]></comment>
