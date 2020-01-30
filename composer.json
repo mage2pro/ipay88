@@ -1,6 +1,6 @@
 {
 	"name": "mage2pro/ipay88"
-	,"version": "1.6.4"
+	,"version": "1.6.5"
 	,"description": "iPay88 integration with Magento 2"
 	,"type": "magento2-module"
 	,"homepage": "https://mage2.pro/c/extensions/ipay88"
@@ -11,7 +11,7 @@
 		"homepage": "https://mage2.pro/users/dmitry_fedyuk",
 		"role": "Developer"
 	}]
-	,"require": {"mage2pro/core": ">=3.4.1"}
+	,"require": {"mage2pro/core": ">=5.8.0"}
 	,"autoload": {"files": ["registration.php"], "psr-4": {"Dfe\\IPay88\\": ""}}
 	,"keywords": [
 		"API"
