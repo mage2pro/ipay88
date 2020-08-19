@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\IPay88\Init;
-// 2017-04-10
+# 2017-04-10
 /** @method \Dfe\IPay88\Method m() */
 final class Action extends \Df\PaypalClone\Init\Action {
 	/**

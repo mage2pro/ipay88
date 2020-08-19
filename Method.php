@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\IPay88;
-// 2017-04-10
+# 2017-04-10
 /** @method Settings s() */
 final class Method extends \Df\PaypalClone\Method {
 	/**

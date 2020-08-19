@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\IPay88\Signer;
-// 2017-04-10
+# 2017-04-10
 final class Request extends \Dfe\IPay88\Signer {
 	/**
 	 * 2017-04-10

@@ -1,6 +1,6 @@
 <?php
 namespace Dfe\IPay88\Setup;
-// 2017-08-19
+# 2017-08-19
 class UpgradeData extends \Df\Framework\Upgrade\Data {
 	/**
 	 * 2017-08-19

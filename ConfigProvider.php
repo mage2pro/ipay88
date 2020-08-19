@@ -1,7 +1,7 @@
 <?php
 namespace Dfe\IPay88;
 use Df\Payment\ConfigProvider\IOptions;
-// 2017-04-10
+# 2017-04-10
 /** @method Settings s() */
 final class ConfigProvider extends \Df\Payment\ConfigProvider implements IOptions {
 	/**

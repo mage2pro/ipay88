@@ -1,7 +1,7 @@
 <?php
 namespace Dfe\IPay88\W;
 use Df\Framework\W\Result\Text;
-// 2017-09-13
+# 2017-09-13
 final class Responder extends \Df\Payment\W\Responder {
 	/**
 	 * 2017-04-12

@@ -84,34 +84,34 @@ final class Charge extends \Df\PaypalClone\Charge {
 	 * @return array(string => mixed)
 	 */
 	protected function pCharge() {return [
-		// 2017-04-10 «Backend response page URL (refer to 2.7)».  Required, String, 200.
+		# 2017-04-10 «Backend response page URL (refer to 2.7)».  Required, String, 200.
 		'BackendURL' => $this->callback()
-		// 2017-04-10
-		// «Encoding type
+		# 2017-04-10
+		# «Encoding type
 		//		“ISO-8859-1” – English
 		//		“UTF-8” – Unicode
 		//		“GB2312” – Chinese Simplified
 		//		“GD18030” – Chinese Simplified
 		//		“BIG5” – Chinese Traditional
-		// ».
-		// Optional, String, 20.
+		# ».
+		# Optional, String, 20.
 		,'Lang' => 'UTF-8'
-		// 2017-04-10
-		// «Refer to Appendix I.pdf file for MYR gateway.
-		// Refer to Appendix II.pdf file for Multi-curency gateway.».
-		// Optional, Integer.
+		# 2017-04-10
+		# «Refer to Appendix I.pdf file for MYR gateway.
+		# Refer to Appendix II.pdf file for Multi-curency gateway.».
+		# Optional, Integer.
 		,'PaymentId' => $this->m()->option()
-		// 2017-04-10 «Product description». Required, String, 100.
-		// 2017-09-04
-		// [iPay88] The maximum length of a payment's products description
-		// (the «ProdDesc» parameter) is 100 characters: https://mage2.pro/t/4460
+		# 2017-04-10 «Product description». Required, String, 100.
+		# 2017-09-04
+		# [iPay88] The maximum length of a payment's products description
+		# (the «ProdDesc» parameter) is 100 characters: https://mage2.pro/t/4460
 		,'ProdDesc' => df_chop(df_oqi_s($this->o()), 100)
-		// 2017-04-10 «Merchant remarks». Optional, String, 100.
-		// 2017-09-04
-		// [iPay88] The maximum length of a payment description
-		// (the «Remark» parameter) is 100 characters: https://mage2.pro/t/4459
+		# 2017-04-10 «Merchant remarks». Optional, String, 100.
+		# 2017-09-04
+		# [iPay88] The maximum length of a payment description
+		# (the «Remark» parameter) is 100 characters: https://mage2.pro/t/4459
 		,'Remark' => $this->description()
-		// 2017-04-10 «Payment response page». Required, String, 200.
+		# 2017-04-10 «Payment response page». Required, String, 200.
 		,'ResponseURL' => $this->customerReturnRemote()
 		/**
 		 * 2017-04-10
@@ -124,9 +124,9 @@ final class Charge extends \Df\PaypalClone\Charge {
 		 * SHA256 — совсем другой алгоритм.
 		 */
 		//,'SignatureType' => 'SHA256'
-		// 2017-04-10 «Customer contact number». Required, String, 20.
+		# 2017-04-10 «Customer contact number». Required, String, 20.
 		,'UserContact' => df_chop($this->customerPhone(), 0, 20) ?: 'absent'
-		,'UserName' => $this->customerName() // 2017-04-10 «Customer name». Required, String, 100.
+		,'UserName' => $this->customerName() # 2017-04-10 «Customer name». Required, String, 100.
 	];}
 
 	/**

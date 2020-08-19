@@ -1,9 +1,9 @@
 <?php
 namespace Dfe\IPay88\W;
 use Dfe\IPay88\Source\Option as Opt;
-// 2017-04-12
-// «Technical Specification v1.6.2 (For Malaysia Only)» Page 8. https://mage2.pro/t/3682
-// «2.5 Payment Response Parameters»
+# 2017-04-12
+# «Technical Specification v1.6.2 (For Malaysia Only)» Page 8. https://mage2.pro/t/3682
+# «2.5 Payment Response Parameters»
 final class Event extends \Df\PaypalClone\W\Event {
 	/**
 	 * 2017-04-13
