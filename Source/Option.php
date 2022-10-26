@@ -26,5 +26,5 @@ final class Option extends \Df\Config\Source {
 	 * @used-by \Df\Config\Source::toOptionArray()
 	 * @return array(<value> => <label>)
 	 */
-	function map() {return df_module_json($this, 'options/myr');}
+	function map():array {return df_module_json($this, 'options/myr');}
 }
