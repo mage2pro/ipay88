@@ -9,7 +9,7 @@ namespace Dfe\IPay88;
 abstract class Signer extends \Df\PaypalClone\Signer {
 	/**
 	 * 2017-04-10
-	 * @used-by sign()
+	 * @used-by self::sign()
 	 * @see \Dfe\IPay88\Signer\Request::values()
 	 * @see \Dfe\IPay88\Signer\Response::values()
 	 * @return string[]
@@ -25,33 +25,20 @@ abstract class Signer extends \Df\PaypalClone\Signer {
 	 * @param array(string => mixed) $v
 	 * @return array(string => mixed)
 	 */
-	final protected function adjust(array $v) {return
-		['Amount' => df_string_clean($v['Amount'], '.', ',')] + $v
-	;}
+	final protected function adjust(array $v) {return ['Amount' => df_string_clean($v['Amount'], '.', ',')] + $v;}
 
 	/**
 	 * 2017-04-10
+	 * 2022-10-27
+	 * https://3v4l.org/ZVTE9
+	 * https://stackoverflow.com/a/50056467
+	 * php.net/manual/function.hex2bin.php
 	 * @override
 	 * @see \Df\PaypalClone\Signer::sign()
 	 * @used-by \Df\PaypalClone\Signer::_sign()
 	 * @return string
 	 */
-	final protected function sign() {return base64_encode(self::hex2bin(sha1(df_cc('',
+	final protected function sign() {return base64_encode(hex2bin(sha1(df_cc('',
 		$this->s()->privateKey(), $this->v('MerchantCode'), $this->values()
 	))));}
-
-	/**
-	 * 2017-04-10
-	 * @used-by sign()
-	 * @param string $s
-	 * @return string
-	 */
-    private static function hex2bin($s) {
-    	/** @var string $result */
-        $result = '';
-        for ($i = 0; $i < strlen($s); $i += 2) {
-            $result .= chr(hexdec(substr($s, $i, 2)));
-        }
-        return $result;
-    }
 }

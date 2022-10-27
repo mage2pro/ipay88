@@ -22,7 +22,7 @@ final class Option extends \Df\Config\Source {
 	 * 2017-04-13 https://github.com/mage2pro/ipay88/blob/0.2.1/etc/options/myr.json
 	 * @override
 	 * @see \Df\Config\Source::map()
-	 * @used-by all()
+	 * @used-by self::all()
 	 * @used-by \Df\Config\Source::toOptionArray()
 	 * @return array(<value> => <label>)
 	 */

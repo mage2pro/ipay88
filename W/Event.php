@@ -81,8 +81,8 @@ final class Event extends \Df\PaypalClone\W\Event {
 	 * https://github.com/mage2pro/ipay88/blob/0.2.1/etc/options/myr.json
 	 * https://github.com/mage2pro/ipay88/blob/0.2.1/etc/options/multicurrency.json
 	 * Если не использовать (int), то результат будет строкой, например: "2".
-	 * @used-by isBankCard()
-	 * @used-by optionTitle()
+	 * @used-by self::isBankCard()
+	 * @used-by self::optionTitle()
 	 * @return int
 	 */
 	private function option() {return (int)$this->r('PaymentId');}
