@@ -11,16 +11,14 @@ class Index extends \Df\Payment\CustomerReturn {
 	 * @override
 	 * @see \Df\Payment\CustomerReturn::isSuccess()
 	 * @used-by \Df\Payment\CustomerReturn::execute()
-	 * @return string
 	 */
-	final protected function isSuccess() {return df_bool(df_request('Status'));}
+	final protected function isSuccess():bool {return df_bool(df_request('Status'));}
 
 	/**
 	 * 2017-04-13
 	 * @override
 	 * @see \Df\Payment\CustomerReturn::message()
 	 * @used-by \Df\Payment\CustomerReturn::execute()
-	 * @return string
 	 */
-	final protected function message() {return df_request('ErrDesc');}
+	final protected function message():string {return df_request('ErrDesc');}
 }

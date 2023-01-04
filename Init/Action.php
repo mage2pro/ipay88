@@ -12,7 +12,6 @@ final class Action extends \Df\PaypalClone\Init\Action {
 	 * @override
 	 * @see \Df\Payment\Init\Action::redirectUrl()
 	 * @used-by \Df\Payment\Init\Action::action()
-	 * @return string
 	 */
-	protected function redirectUrl() {return 'https://payment.ipay88.com.my/epayment/entry.asp';}
+	protected function redirectUrl():string {return 'https://payment.ipay88.com.my/epayment/entry.asp';}
 }

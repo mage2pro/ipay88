@@ -14,7 +14,6 @@ final class Responder extends \Df\Payment\W\Responder {
 	 * @override
 	 * @see \Df\Payment\W\Responder::success()
 	 * @used-by \Df\Payment\W\Responder::get()
-	 * @return Text
 	 */
-	protected function success() {return Text::i('RECEIVEOK');}
+	protected function success():Text {return Text::i('RECEIVEOK');}
 }

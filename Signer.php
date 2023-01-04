@@ -14,18 +14,17 @@ abstract class Signer extends \Df\PaypalClone\Signer {
 	 * @see \Dfe\IPay88\Signer\Response::values()
 	 * @return string[]
 	 */
-	abstract protected function values();
+	abstract protected function values():array;
 
 	/**
 	 * 2017-04-10
 	 * @override
 	 * @see \Df\PaypalClone\Signer::adjust()
 	 * @used-by \Df\PaypalClone\Signer::_sign()
-	 * @see \Dfe\IPay88\Signer::adjust()
 	 * @param array(string => mixed) $v
 	 * @return array(string => mixed)
 	 */
-	final protected function adjust(array $v) {return ['Amount' => df_string_clean($v['Amount'], '.', ',')] + $v;}
+	final protected function adjust(array $v):array {return ['Amount' => df_string_clean($v['Amount'], '.', ',')] + $v;}
 
 	/**
 	 * 2017-04-10
@@ -36,9 +35,8 @@ abstract class Signer extends \Df\PaypalClone\Signer {
 	 * @override
 	 * @see \Df\PaypalClone\Signer::sign()
 	 * @used-by \Df\PaypalClone\Signer::_sign()
-	 * @return string
 	 */
-	final protected function sign() {return base64_encode(hex2bin(sha1(df_cc('',
+	final protected function sign():string {return base64_encode(hex2bin(sha1(df_cc('',
 		$this->s()->privateKey(), $this->v('MerchantCode'), $this->values()
 	))));}
 }

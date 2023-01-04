@@ -9,5 +9,5 @@ final class Request extends \Dfe\IPay88\Signer {
 	 * @used-by \Dfe\IPay88\Signer::sign()
 	 * @return string[]
 	 */
-	protected function values() {return dfa($this->v(), ['RefNo', 'Amount', 'Currency']);}
+	protected function values():array {return $this->v(['RefNo', 'Amount', 'Currency']);}
 }

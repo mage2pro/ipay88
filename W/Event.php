@@ -24,45 +24,40 @@ final class Event extends \Df\PaypalClone\W\Event {
 	 * @override
 	 * @see \Df\PaypalClone\W\Event::k_idE()
 	 * @used-by \Df\PaypalClone\W\Event::idE()
-	 * @return string
 	 */
-	protected function k_idE() {return 'TransId';}
+	protected function k_idE():string {return 'TransId';}
 
 	/**
 	 * 2017-04-12 «Unique merchant transaction number / Order ID»
 	 * @override
 	 * @see \Df\Payment\W\Event::k_pid()
 	 * @used-by \Df\Payment\W\Event::pid()
-	 * @return string
 	 */
-	protected function k_pid() {return 'RefNo';}
+	protected function k_pid():string {return 'RefNo';}
 
 	/**
 	 * 2017-04-12 «SHA-256 signature (refer to 3.2)»
 	 * @override
 	 * @see \Df\PaypalClone\W\Event::k_signature()
 	 * @used-by \Df\PaypalClone\W\Event::signatureProvided()
-	 * @return string
 	 */
-	protected function k_signature() {return 'Signature';}
+	protected function k_signature():string {return 'Signature';}
 
 	/**
 	 * 2017-04-12 «Payment status: “1” – Success, “0” – Fail»
 	 * @override
 	 * @see \Df\PaypalClone\W\Event::k_status()
 	 * @used-by \Df\PaypalClone\W\Event::status()
-	 * @return string
 	 */
-	protected function k_status() {return 'Status';}
+	protected function k_status():string {return 'Status';}
 
 	/**
 	 * 2017-04-12 «Payment status description»
 	 * @override
 	 * @see \Df\PaypalClone\W\Event::k_statusT()
 	 * @used-by \Df\PaypalClone\W\Event::statusT()
-	 * @return string|null
 	 */
-	protected function k_statusT() {return 'ErrDesc';}
+	protected function k_statusT():string {return 'ErrDesc';}
 
 	/**
 	 * 2017-04-12 «“1” – Success, “0” – Fail»
@@ -72,9 +67,8 @@ final class Event extends \Df\PaypalClone\W\Event {
 	 * @override
 	 * @see \Df\PaypalClone\W\Event::statusExpected()
 	 * @used-by \Df\PaypalClone\W\Event::isSuccessful()
-	 * @return int
 	 */
-	protected function statusExpected() {return 1;}
+	protected function statusExpected():string {return '1';}
 
 	/**
 	 * 2017-04-13

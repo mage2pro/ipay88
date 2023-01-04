@@ -11,9 +11,9 @@ final class Choice extends \Df\Payment\Choice {
 	 * @see \Df\Payment\Choice::title()
 	 * @used-by \Df\Payment\Block\Info::choiceT()
 	 * @used-by \Df\Payment\Observer\DataProvider\SearchResult::execute()
-	 * @return Phrase|string|null
+	 * @return Phrase|string
 	 */
-	function title() {return dfc($this, function() {return /** @var Event $ev */
+	function title():string {return dfc($this, function() {return /** @var Event $ev */
 		($ev = $this->responseF()) ? $ev->optionTitle() :  __('Not yet paid')
 	;});}
 }

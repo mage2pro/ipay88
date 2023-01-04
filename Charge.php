@@ -17,9 +17,8 @@ final class Charge extends \Df\PaypalClone\Charge {
 	 * @override
 	 * @see \Df\PaypalClone\Charge::k_Amount()
 	 * @used-by \Df\PaypalClone\Charge::p()
-	 * @return string
 	 */
-	protected function k_Amount() {return 'Amount';}
+	protected function k_Amount():string {return 'Amount';}
 	
 	/**
 	 * 2017-08-19
@@ -30,9 +29,8 @@ final class Charge extends \Df\PaypalClone\Charge {
 	 * @override
 	 * @see \Df\PaypalClone\Charge::k_Currency()
 	 * @used-by \Df\PaypalClone\Charge::p()
-	 * @return string
 	 */
-	protected function k_Currency() {return 'Currency';}
+	protected function k_Currency():string {return 'Currency';}
 
 	/**
 	 * 2017-08-19
@@ -40,9 +38,8 @@ final class Charge extends \Df\PaypalClone\Charge {
 	 * @override
 	 * @see \Df\PaypalClone\Charge::k_Email()
 	 * @used-by \Df\PaypalClone\Charge::p()
-	 * @return string
 	 */
-	protected function k_Email() {return 'UserEmail';}
+	protected function k_Email():string {return 'UserEmail';}
 
 	/**
 	 * 2017-08-19   
@@ -52,9 +49,8 @@ final class Charge extends \Df\PaypalClone\Charge {
 	 * @override
 	 * @see \Df\PaypalClone\Charge::k_MerchantId()
 	 * @used-by \Df\PaypalClone\Charge::p()
-	 * @return string
 	 */
-	protected function k_MerchantId() {return 'MerchantCode';}
+	protected function k_MerchantId():string {return 'MerchantCode';}
 	
 	/**
 	 * 2017-04-10
@@ -62,19 +58,16 @@ final class Charge extends \Df\PaypalClone\Charge {
 	 * @override
 	 * @see \Df\PaypalClone\Charge::k_RequestId()
 	 * @used-by \Df\PaypalClone\Charge::p()
-	 * @return string
 	 */
-	protected function k_RequestId() {return 'RefNo';}
+	protected function k_RequestId():string {return 'RefNo';}
 
 	/**
-	 * 2017-04-10
-	 * «SHA-256 signature (refer to 3.1)». Required, String, 100.
+	 * 2017-04-10 «SHA-256 signature (refer to 3.1)». Required, String, 100.
 	 * @override
 	 * @see \Df\PaypalClone\Charge::k_Signature()
 	 * @used-by \Df\PaypalClone\Charge::p()
-	 * @return string
 	 */
-	protected function k_Signature() {return 'Signature';}
+	protected function k_Signature():string {return 'Signature';}
 
 	/**
 	 * 2017-04-10
@@ -83,7 +76,7 @@ final class Charge extends \Df\PaypalClone\Charge {
 	 * @used-by \Df\PaypalClone\Charge::p()
 	 * @return array(string => mixed)
 	 */
-	protected function pCharge() {return [
+	protected function pCharge():array {return [
 		# 2017-04-10 «Backend response page URL (refer to 2.7)».  Required, String, 200.
 		'BackendURL' => $this->callback()
 		# 2017-04-10
@@ -133,12 +126,10 @@ final class Charge extends \Df\PaypalClone\Charge {
 	 * 2017-08-19
 	 * 2017-09-02
 	 * «Test transaction with amount MYR 1.00».
-	 * The PDF documentation («Technical Specification v1.6.2 (for Malaysia Only)»), page 2:
-	 * https://mage2.pro/t/4259
+	 * The PDF documentation («Technical Specification v1.6.2 (for Malaysia Only)»), page 2: https://mage2.pro/t/4259
 	 * @override
 	 * @see \Df\PaypalClone\Charge::testAmountF()
 	 * @used-by \Df\PaypalClone\Charge::p()
-	 * @return string
 	 */
-	protected function testAmountF() {return '1.00';}
+	protected function testAmountF():string {return '1.00';}
 }

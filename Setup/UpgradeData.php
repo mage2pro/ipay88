@@ -8,7 +8,7 @@ class UpgradeData extends \Df\Framework\Upgrade\Data {
 	 * @see \Df\Framework\Upgrade::_process()
 	 * @used-by \Df\Framework\Upgrade::process()
 	 */
-	protected function _process() {
+	protected function _process():void {
 		$t = $this->t('core_config_data'); /** @var string $t */
 		$this->c()->query("
 			UPDATE $t

@@ -9,10 +9,8 @@ final class Method extends \Df\PaypalClone\Method {
 	 * @override
 	 * @see \Df\Payment\Method::amountFormat()
 	 * @used-by \Df\Payment\Operation::amountFormat()
-	 * @param float|int $a
-	 * @return string
 	 */
-	function amountFormat($a) {return number_format($a, 2, '.', ',');}
+	function amountFormat(float $a):string {return number_format($a, 2, '.', ',');}
 
 	/**
 	 * 2017-04-14
@@ -27,9 +25,8 @@ final class Method extends \Df\PaypalClone\Method {
 	 * @see \Df\Payment\Method::amountFactor()
 	 * @used-by \Df\Payment\Method::amountFormat()
 	 * @used-by \Df\Payment\Method::amountParse()
-	 * @return int
 	 */
-	protected function amountFactor() {return 1;}
+	protected function amountFactor():int {return 1;}
 
 	/**
 	 * 2017-04-10
@@ -47,7 +44,7 @@ final class Method extends \Df\PaypalClone\Method {
 	 * @used-by \Df\Payment\Method::assignData()
 	 * @return string[]
 	 */
-	protected function iiaKeys() {return [self::$II_OPTION];}
+	protected function iiaKeys():array {return [self::$II_OPTION];}
 
 	/**
 	 * 2017-04-10
