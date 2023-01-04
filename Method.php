@@ -4,8 +4,7 @@ namespace Dfe\IPay88;
 /** @method Settings s() */
 final class Method extends \Df\PaypalClone\Method {
 	/**
-	 * 2017-04-10
-	 * «Payment amount with two decimals and thousand symbols. Example: 1,278.99»
+	 * 2017-04-10 «Payment amount with two decimals and thousand symbols. Example: 1,278.99»
 	 * @override
 	 * @see \Df\Payment\Method::amountFormat()
 	 * @used-by \Df\Payment\Operation::amountFormat()
