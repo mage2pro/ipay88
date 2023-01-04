@@ -15,7 +15,7 @@ final class Option extends \Df\Config\Source {
 	 * @used-by \Dfe\IPay88\W\Event::optionTitle()
 	 * @return array(int => string)
 	 */
-	function all() {return $this->map() + df_module_json($this, 'options/multicurrency');}
+	function all():array {return $this->map() + df_module_json($this, 'options/multicurrency');}
 
 	/**
 	 * 2017-04-10
