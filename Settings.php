@@ -8,7 +8,6 @@ final class Settings extends \Df\Payment\Settings {
 	/**
 	 * 2018-08-24
 	 * @used-by \Dfe\IPay88\ConfigProvider::options()
-	 * @return O
 	 */
-	function options() {return $this->_options(OptionSource::class);}
+	function options():O {return $this->_options(OptionSource::class);}
 }
