@@ -81,11 +81,11 @@ final class Charge extends \Df\PaypalClone\Charge {
 		'BackendURL' => $this->callback()
 		# 2017-04-10
 		# «Encoding type
-		//		“ISO-8859-1” – English
-		//		“UTF-8” – Unicode
-		//		“GB2312” – Chinese Simplified
-		//		“GD18030” – Chinese Simplified
-		//		“BIG5” – Chinese Traditional
+		#		“ISO-8859-1” – English
+		#		“UTF-8” – Unicode
+		#		“GB2312” – Chinese Simplified
+		#		“GD18030” – Chinese Simplified
+		#		“BIG5” – Chinese Traditional
 		# ».
 		# Optional, String, 20.
 		,'Lang' => 'UTF-8'
