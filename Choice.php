@@ -13,7 +13,7 @@ final class Choice extends \Df\Payment\Choice {
 	 * @used-by \Df\Payment\Observer\DataProvider\SearchResult::execute()
 	 * @return Phrase|string
 	 */
-	function title():string {return dfc($this, function() {return /** @var Event $ev */
-		($ev = $this->responseF()) ? $ev->optionTitle() :  __('Not yet paid')
+	function title():string {return dfc($this, function():string {return /** @var Event $ev */
+		($ev = $this->responseF()) ? $ev->optionTitle() : (string)__('Not yet paid')
 	;});}
 }
